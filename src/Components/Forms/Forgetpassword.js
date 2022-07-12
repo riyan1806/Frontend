@@ -54,7 +54,7 @@ function Demo() {
           <form onSubmit={form.onSubmit((values) => console.log(values))}>
          
         <TextInput
-          type="number"
+          type="numberg"
           required
           
           label= "Enter OTP" 
