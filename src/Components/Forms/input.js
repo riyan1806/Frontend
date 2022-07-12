@@ -61,60 +61,14 @@ function Demo() {
   });
 
   return (
-    <Box className="form" sx={{ maxWidth: 350 }} mx="auto">
+    <Box className="signupform" sx={{ maxWidth: 400 }} >
+      <h1>Login</h1>
       <form onSubmit={form.onSubmit((values) => console.log(values))}>
-        <div className="row">
-          <TextInput
-            className=" col-md-6"
-            required
-            label="First Name"
-            placeholder="First Name"
-            // onChange={(event) => {
-            //   setfName(event.target.value);
-            // }}
-            {...form.getInputProps("fName")}
-          />
-          <TextInput
-            className="col-md-6"
-            required
-            label="Last Name"
-            placeholder="Last Name"
-            // onChange={(event) => {
-            //   setlName(event.target.value);
-            // }}
-            {...form.getInputProps("lName")}
-          />
-        </div>
-        <TextInput
-          required
-          label="Phone Number"
-          placeholder="Phone Number"
-          type="text"
-          // onChange={(event) => {
-          //   setPhoneNumber(event.target.value);
-          // }}
-          onKeyPress={(event) => {
-            if (!/[0-9]/.test(event.key)) {
-              event.preventDefault();
-            }
-          }}
-          maxLength="10"
-          {...form.getInputProps("phoneNumber")}
-        />
-
-        {/* <ReactPhoneInput
-          inputExtraProps={{
-            name: "phone",
-            required: true,
-            autoFocus: true,
-          }}
-          defaultCountry={"sg"}
-          value={this.state.phone}
-          onChange={this.handleOnChange}
-        /> */}
+       
         <TextInput
           required
           label="Email"
+        
           placeholder="your@email.com"
           // onChange={(event) => {
           //   setEmail(event.target.value);
@@ -128,26 +82,20 @@ function Demo() {
           // }}
         />
 
-        <DatePicker
-          placeholder="Birth Date"
-          label="Birth Date"
-          // onChange={(event) => {
-          //   setBirthDate(event.target.value);
-          // }}
-          {...form.getInputProps("birthDate")}
-        />
+        
 
         <div className="flex ">
           <input id="remember" type="checkbox" />
           <label for="remember">Remember</label>
           <div className="forgot ">
-            <a href="/">Forgot your password?</a>
+            <a href="/Forgotpassword">Forgot your password?</a>
+            
           </div>
         </div>
 
         <Group>
           <Button
-            className="btn"
+            className="btn-signup"
             type="submit"
             value="Submit"
             // disabled={!isValid}
@@ -156,12 +104,7 @@ function Demo() {
           </Button>
         </Group>
 
-        <p className="para">
-          Don't have an account?
-          <a href="/" className="reg">
-            Register here
-          </a>
-        </p>
+   
       </form>
     </Box>
   );

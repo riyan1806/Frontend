@@ -1,9 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';  
+
 import './index.css';
 import App from './App';
+import Forgetpassword from "./Components/Forms/Forgetpassword";
 import reportWebVitals from './reportWebVitals';
-
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+const routing = (  
+  <Router>  
+    <div>  
+ 
+      <Route exact path="/" component={App} />  
+      <Route exact path="/Forgetpassword" component={Forgetpassword} />    
+    </div>  
+  </Router>  
+)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
